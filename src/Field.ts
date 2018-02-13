@@ -11,6 +11,18 @@ export interface Field<A> extends Ring<A> {
 }
 
 /** @instance */
+export const fieldInteger: Field<number> = {
+  add: (x, y) => (x + y) | 0,
+  zero: 0,
+  mul: (x, y) => (x * y) | 0,
+  one: 1,
+  sub: (x, y) => (x - y) | 0,
+  degree: x => Math.min(Math.abs(x), 2147483647),
+  div: (x, y) => (x / y) | 0,
+  mod: (x, y) => (x % y) | 0
+}
+
+/** @instance */
 export const fieldNumber: Field<number> = {
   add: (x, y) => x + y,
   zero: 0,

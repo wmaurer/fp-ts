@@ -2,23 +2,22 @@
   "name": "fp-ts",
   "version": "1.0.0",
   "description": "Functional programming in TypeScript",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "lint": "tslint src/**/*.ts test/**/*.ts examples/**/*.ts exercises/**/*.ts",
     "mocha": "TS_NODE_CACHE=false mocha -r ts-node/register test/*.ts",
-    "prettier":
-      "prettier --no-semi --single-quote --print-width 120 --parser typescript --list-different \"{src,test,examples,exercises}/**/*.ts\"",
-    "fix-prettier":
-      "prettier --no-semi --single-quote --print-width 120 --parser typescript --write \"{src,test,examples,exercises}/**/*.ts\"",
+    "prettier": "prettier --no-semi --single-quote --print-width 120 --parser typescript --list-different \"{src,test,examples,exercises}/**/*.ts\"",
+    "fix-prettier": "prettier --no-semi --single-quote --print-width 120 --parser typescript --write \"{src,test,examples,exercises}/**/*.ts\"",
     "typings": "typings-checker --project ./typings-checker/tsconfig.json ./typings-checker/index.ts",
     "test": "npm run lint && npm run prettier && npm run typings && npm run mocha",
     "clean": "rm -rf lib/*",
     "build": "npm run clean && tsc",
     "docs-incremental": "ts-node docs/api/main.ts",
-    "docs-fix-prettier":
-      "prettier --no-semi --single-quote --print-width 120 --parser markdown --write \"docs/**/*.md\"",
+    "docs-fix-prettier": "prettier --no-semi --single-quote --print-width 120 --parser markdown --write \"docs/**/*.md\"",
     "docs": "rm -rf docs/api/md/* && npm run docs-incremental"
   },
   "repository": {
@@ -41,6 +40,7 @@
     "doctrine": "2.0.0",
     "mocha": "3.2.0",
     "prettier": "1.8.2",
+    "testcheck": "^1.0.0-rc.2",
     "ts-node": "3.1.0",
     "ts-simple-ast": "0.74.0",
     "tslint": "4.4.2",
@@ -48,6 +48,14 @@
     "typescript": "^2.7.1",
     "typings-checker": "^2.0.0"
   },
-  "tags": ["typescript", "algebraic-data-types", "functional-programming"],
-  "keywords": ["typescript", "algebraic-data-types", "functional-programming"]
+  "tags": [
+    "typescript",
+    "algebraic-data-types",
+    "functional-programming"
+  ],
+  "keywords": [
+    "typescript",
+    "algebraic-data-types",
+    "functional-programming"
+  ]
 }
